@@ -74,6 +74,11 @@ function tenderSpring_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'tenderSpring' ),
 	) );
+	
+	/**
+	 * Language
+	 */
+	load_theme_textdomain('tenderSpring', get_template_directory() . '/languages');
 }
 endif; // tenderSpring_setup
 
