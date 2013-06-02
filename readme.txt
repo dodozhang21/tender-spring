@@ -14,6 +14,7 @@ visit http://pure-essence.net/2013/03/07/wordpress-theme-tender-spring/
 Notes:
 --------------------------------------------------------------------------------
 Long menu is not supported by the top menu. Please do not put too many items in your top menu or you will run into layout issue with the top menu.
+Menu with more than three levels of depth is not supported.
 
 
 --------------------------------------------------------------------------------

@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/03/07/wordpress-theme-tender-spring
 Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Tender Spring is a responsive, WordPress 3.5 ready theme that gives you a great feel of spring.  It supports Jetpack infinite scroll.
-Version: 1.0.6
+Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: flexible-width, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, green, light, custom-menu, editor-style, full-width-template
@@ -580,6 +580,7 @@ footer.entry-meta {
 .entry-content,
 .entry-summary {
 	margin: 0;
+	word-wrap: break-word;
 }
 .page-links {
 	clear: both;
@@ -849,15 +850,16 @@ a.post-edit-link:hover {
 .entry-title,
 .entry-title a {
 	border-bottom: 0px none;
-	width: auto;
 	position: relative;
 	margin: 0;
 	padding: 0;
 	line-height: normal;
 	color: #318a3b;
 	text-decoration: none;
-	float: right;
 	text-shadow: 2px 1px #EEEA1B;
+	word-wrap: break-word;
+	width: 100%;
+	text-align: right;
 }
 h1.page-title {
     font-weight: bold;
