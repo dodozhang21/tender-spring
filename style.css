@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/03/07/wordpress-theme-tender-spring
 Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Tender Spring is a responsive, WordPress 3.5 ready theme that gives you a great feel of spring.  It supports Jetpack infinite scroll.
-Version: 1.0.10
+Version: 1.0.11
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: flexible-width, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, green, light, custom-menu, editor-style, full-width-template, translation-ready
@@ -405,7 +405,7 @@ a:visited {
 /* =Menu
 ----------------------------------------------- */
 #nav-menu-wrapper {
-	margin-left: 150px;
+	margin-left: 40px;
 }
 .main-navigation {
 	clear: both;
@@ -432,7 +432,7 @@ a:visited {
 	float: left;
 	border-right: 1px solid #fff;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 1px 0;
 }
 .main-navigation div > ul.menu > li:last-of-type,
 .main-navigation .menu > ul > li:last-of-type {
@@ -522,7 +522,6 @@ a:visited {
 #content article.page,
 #content article.attachment {
 	padding-bottom: 40px;
-	padding-left: 50px;
 	background: url(images/postLeftCorner.png) no-repeat left bottom;
 }
 #content article.post,
@@ -750,28 +749,24 @@ img.attachment-full {
 /* Main */
 
 body {
-	background: #fff url(images/middle.png) left top repeat-x;
 	color: #125716;
 	font-size: 1.8em;
 }
 
-#containerForLeftBk {
-	background: url("images/leftBk.png") repeat-y scroll left top transparent;
-}
-#containerForRightBk {
-	background: url("images/rightBk.png") repeat-y scroll right top transparent;
-}
 
 #page {
-	background: url("images/upperLeft.png") no-repeat scroll left top transparent;
-    margin: 0;
-	padding-bottom: 20px;
+	background: url(images/upperLeft.png) no-repeat left top
+				,url(images/upperRight.png) no-repeat right top
+				,url(images/leftBk.png) repeat-y left top
+				,url(images/rightBk.png) repeat-y right top
+				,url(images/middle.png) repeat-x left top
+				;
+    margin: 0 auto;
 }
 
 #container {
-	background: url("images/upperRight.png") no-repeat scroll right top transparent;
     margin: 0;
-	padding-right: 110px;
+	padding: 0 110px;
 }
 
 #main {
@@ -782,9 +777,8 @@ body {
 /* Header */
 
 #masthead {
-	padding-left: 110px;
 }
-#masthead hgroup {
+#masthead div {
 	padding: 80px 50px 1em 50px;
 }
 #masthead .site-title,
@@ -809,7 +803,7 @@ body {
 
 #primary {
 	border: 0;
-	margin: 0 22% 0 88px;
+	margin: 0 22% 0 0;
 }
 article {
 	padding: 1em;
@@ -960,6 +954,15 @@ footer#colophon {
     color: #379A42;
 	font-size: 85%;
 	padding: 80px 110px 0 110px;
+	background: url(images/bottomRight.png) no-repeat right top
+				,url(images/bottomLeft.png) no-repeat left top
+				,url(images/bottomMiddle.png) repeat-x left top
+				;
+	padding-bottom: 20px;
+}
+
+footer a {
+	color: #318a3b;
 }
 
 .site-info {
@@ -971,20 +974,6 @@ footer#colophon {
 	display: block;
 }
 
-footer a {
-	color: #318a3b;
-}
-
-#footerMiddle {
-	background: url(images/bottomMiddle.png) repeat-x scroll left top transparent;
-}
-#footerRight {
-	background: url(images/bottomRight.png) no-repeat right top;
-}
-#footerLeft {
-	background: url(images/bottomLeft.png) no-repeat left top;
-	min-height: 150px;
-}
 /* Comments */
 
 #comments {
@@ -1289,12 +1278,7 @@ table#wp-calendar td#next {
 	}
 	body,
 	#container,
-	#containerForLeftBk,
-	#containerForRightBk,
-	#page,
-	#footerMiddle,
-	#footerRight,
-	#footerLeft {
+	#page {
 		background: none;
 		margin: 0;
 		padding: 0;

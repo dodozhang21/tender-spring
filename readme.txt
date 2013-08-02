@@ -3,6 +3,7 @@ Thank you for choosing Tender Spring Theme.
 Version History:
 
 version 1.0.0 – Hello, world!
+version 1.0.11 - Modified CSS to make it easier to customize the theme with a fixed width
 
 --------------------------------------------------------------------------------
 For support 
@@ -15,6 +16,8 @@ Notes:
 --------------------------------------------------------------------------------
 Long menu is not supported by the top menu. Please do not put too many items in your top menu or you will run into layout issue with the top menu.
 Menu with more than three levels of depth is not supported.
+
+To use a fixed width for the layout, add custom CSS: body #page { max-width: 1200px } // modify the width pixels accordingly
 
 
 --------------------------------------------------------------------------------

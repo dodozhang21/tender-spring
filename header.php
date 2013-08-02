@@ -24,16 +24,14 @@
 
 <body <?php body_class(); ?>>
 
-<div id="containerForLeftBk">
-<div id="containerForRightBk">
 
 <div id="page" class="hfeed site">
 	<div id="container">
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+		<div>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+		</div>
 	</header><!-- #masthead .site-header -->
 	<div id="nav-menu-wrapper">
 		<nav role="navigation" class="site-navigation main-navigation">
