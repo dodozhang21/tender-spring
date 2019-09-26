@@ -11,9 +11,19 @@
  *
  * @since tenderSpring 1.0
  */
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
 	$content_width = 980; /* pixels */
+}
 
+/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 * @since 2.0.0
+ */
+add_theme_support( 'title-tag' );
+	
 if ( ! function_exists( 'tenderSpring_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -72,13 +82,13 @@ function tenderSpring_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'tenderSpring' ),
+		'primary' => __( 'Primary Menu', 'tender-spring' ),
 	) );
 	
 	/**
 	 * Language
 	 */
-	load_theme_textdomain('tenderSpring', get_template_directory() . '/languages');
+	load_theme_textdomain('tender-spring', get_template_directory() . '/languages');
 }
 endif; // tenderSpring_setup
 
@@ -86,7 +96,7 @@ add_action( 'after_setup_theme', 'tenderSpring_setup' );
 
 /* Filter to add author credit to Infinite Scroll footer */
 function tenderSpring_footer_credits( $credit ) {
-	$credit = sprintf( __( '%3$s | Theme: %1$s by %2$s.', 'tenderSpring' ), 'Tender Spring', '<a href="http://regretless.com/" rel="designer">Ying Zhang</a>', '<a href="http://wordpress.org/" title="' . esc_attr( __( 'A Semantic Personal Publishing Platform', 'tenderSpring' ) ) . '" rel="generator">Proudly powered by WordPress</a>' );
+	$credit = sprintf( __( '%3$s | Theme: %1$s by %2$s.', 'tender-spring' ), 'Tender Spring', '<a href="http://regretless.com/" rel="designer">Ying Zhang</a>', '<a href="https://wordpress.org/" title="' . esc_attr( __( 'A Semantic Personal Publishing Platform', 'tender-spring' ) ) . '" rel="generator">Proudly powered by WordPress</a>' );
 	return $credit;
 }
 add_filter( 'infinite_scroll_credit', 'tenderSpring_footer_credits' );
@@ -98,7 +108,7 @@ add_filter( 'infinite_scroll_credit', 'tenderSpring_footer_credits' );
  */
 function tenderSpring_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'tenderSpring' ),
+		'name' => __( 'Sidebar', 'tender-spring' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
@@ -115,7 +125,7 @@ add_action( 'widgets_init', 'tenderSpring_widgets_init' );
  */
 function tenderSpring_new_excerpt_more($more) {
     global $post;
-	$excerpt_more = sprintf( __( ' <a href="%1$s">Continue reading &#8594;</a>', 'tenderSpring' ), get_permalink($post->ID) );
+	$excerpt_more = sprintf( __( ' <a href="%1$s">Continue reading &#8594;</a>', 'tender-spring' ), get_permalink($post->ID) );
 
 	return $excerpt_more;
 }
@@ -166,9 +176,9 @@ add_action('wp_head', 'tenderSpring_custom_css');
  */
 function tenderSpring_filter_wp_title( $title, $separator ) {
 	// Don't affect wp_title() calls in feeds.
-	if ( is_feed() )
+	if ( is_feed() ) {
 		return $title;
-
+	}
 	// The $paged global variable contains the page number of a listing of posts.
 	// The $page global variable contains the page number of a single post that is paged.
 	// We'll display whichever one applies, if we're not looking at the first page.
@@ -213,4 +223,3 @@ function tenderSpring_post_image_html( $html, $post_id, $post_image_id ) {
 	return $html;
 }
 add_filter( 'post_thumbnail_html', 'tenderSpring_post_image_html', 10, 3);
-?>

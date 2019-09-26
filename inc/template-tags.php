@@ -23,21 +23,21 @@ function tenderSpring_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'tenderSpring' ); ?></h1>
+		<h1 class="assistive-text"><?php _e( 'Post navigation', 'tender-spring' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&laquo;', 'Previous post link', 'tenderSpring' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&raquo;', 'Next post link', 'tenderSpring' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&laquo;', 'Previous post link', 'tender-spring' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&raquo;', 'Next post link', 'tender-spring' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&laquo;</span> Older posts', 'tenderSpring' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&laquo;</span> Older posts', 'tender-spring' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&raquo;</span>', 'tenderSpring' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&raquo;</span>', 'tender-spring' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -62,7 +62,7 @@ function tenderSpring_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'tenderSpring' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'tenderSpring' ), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'tender-spring' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'tender-spring' ), ' ' ); ?></p>
 	<?php
 			break;
 		default :
@@ -72,10 +72,10 @@ function tenderSpring_comment( $comment, $args, $depth ) {
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'tenderSpring' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="says">says:</span>', 'tender-spring' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'tenderSpring' ); ?></em>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'tender-spring' ); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -83,9 +83,9 @@ function tenderSpring_comment( $comment, $args, $depth ) {
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'tenderSpring' ), get_comment_date(), get_comment_time() ); ?>
+						printf( __( '%1$s at %2$s', 'tender-spring' ), get_comment_date(), get_comment_time() ); ?>
 					</time></a>
-					<?php edit_comment_link( __( '(Edit)', 'tenderSpring' ), ' ' );
+					<?php edit_comment_link( __( '(Edit)', 'tender-spring' ), ' ' );
 					?>
 				</div><!-- .comment-meta .commentmetadata -->
 			</footer>
@@ -110,13 +110,13 @@ if ( ! function_exists( 'tenderSpring_posted_on' ) ) :
  * @since tenderSpring 1.0
  */
 function tenderSpring_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'tenderSpring' ),
+	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'tender-spring' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'tenderSpring' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'tender-spring' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
 }

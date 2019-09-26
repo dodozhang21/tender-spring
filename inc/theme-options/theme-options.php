@@ -42,11 +42,11 @@ function tenderSpring_theme_options_init() {
 
 	/* Register our individual settings fields */
 
-	add_settings_field( 'custom_css', __( 'Custom CSS', 'tenderSpring' ), 'tenderSpring_settings_field_custom_css', 'theme_options', 'general' );
+	add_settings_field( 'custom_css', __( 'Custom CSS', 'tender-spring' ), 'tenderSpring_settings_field_custom_css', 'theme_options', 'general' );
 
 	add_settings_field(
 		'support', // Unique identifier for the field for this section
-		__( 'Support tenderSpring', 'tenderSpring' ), // Setting field label
+		__( 'Support tenderSpring', 'tender-spring' ), // Setting field label
 		'tenderSpring_settings_field_support', // Function that renders the settings field
 		'theme_options', // Menu slug, used to uniquely identify the page; see _s_theme_options_add_page()
 		'general' // Settings section. Same as the first argument in the add_settings_section() above
@@ -78,8 +78,8 @@ add_filter( 'option_page_capability_tenderSpring_options', 'tenderSpring_option_
  */
 function tenderSpring_theme_options_add_page() {
 	$theme_page = add_theme_page(
-		__( 'Theme Options', 'tenderSpring' ),   // Name of page
-		__( 'Theme Options', 'tenderSpring' ),   // Label in menu
+		__( 'Theme Options', 'tender-spring' ),   // Name of page
+		__( 'Theme Options', 'tender-spring' ),   // Label in menu
 		'edit_theme_options',                    // Capability required
 		'theme_options',                         // Menu slug, used to uniquely identify the page
 		'tenderSpring_theme_options_render_page' // Function that renders the options page
@@ -145,7 +145,7 @@ function tenderSpring_settings_field_custom_css() {
 	$options = tenderSpring_get_theme_options();
 	?>
 	<textarea class="large-text" type="text" name="tenderSpring_theme_options[custom_css]" id="custom_css" cols="50" rows="10" /><?php echo esc_textarea( $options['custom_css'] ); ?></textarea>
-	<label class="description" for="custom_css"><?php _e( 'Add any custom CSS rules here so they will persist through theme updates.', 'tenderSpring' ); ?></label>
+	<label class="description" for="custom_css"><?php _e( 'Add any custom CSS rules here so they will persist through theme updates.', 'tender-spring' ); ?></label>
 	<?php
 }
 
@@ -161,18 +161,18 @@ function tenderSpring_settings_field_support() {
 	<label>
 		<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PUKAB93RNE83S" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online!" class="alignright"></a>
 
-		<?php _e( 'If you enjoy my themes, please consider making a secure donation using the PayPal button to your right. Anything is appreciated!', 'tenderSpring' ); ?>
+		<?php _e( 'If you enjoy my themes, please consider making a secure donation using the PayPal button to your right. Anything is appreciated!', 'tender-spring' ); ?>
 
 		<br /><input type="checkbox" name="tenderSpring_theme_options[support]" id="support" <?php checked( 'on', $options['support'] ); ?> />
 		<label class="description" for="support">
-			<?php _e( 'No, thank you! Dismiss this message.', 'tenderSpring' ); ?>
+			<?php _e( 'No, thank you! Dismiss this message.', 'tender-spring' ); ?>
 		</label>
 	</label>
 	<?php
 	}
 	else { ?>
 		<label class="description" for="support">
-			<?php _e( 'Hide Donate Button', 'tenderSpring' ); ?>
+			<?php _e( 'Hide Donate Button', 'tender-spring' ); ?>
 		</label>
 		<input type="checkbox" name="tenderSpring_theme_options[support]" id="support" <?php checked( 'on', $options['support'] ); ?> />
 
@@ -191,8 +191,7 @@ function tenderSpring_settings_field_support() {
 function tenderSpring_theme_options_render_page() {
 	?>
 	<div class="wrap">
-		<?php screen_icon(); ?>
-		<h2><?php printf( __( '%s Theme Options', 'tenderSpring' ), wp_get_theme() ); ?></h2>
+		<h2><?php printf( __( '%s Theme Options', 'tender-spring' ), wp_get_theme() ); ?></h2>
 		<?php settings_errors(); ?>
 
 		<form method="post" action="options.php">

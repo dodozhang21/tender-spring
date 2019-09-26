@@ -6,7 +6,7 @@
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Learn more: https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package tenderSpring
  * @since tenderSpring 1.0
@@ -40,11 +40,11 @@ get_header(); ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'No posts to display', 'tenderSpring' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'No posts to display', 'tender-spring' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'tenderSpring' ), admin_url( 'post-new.php' ) ); ?></p>
+						<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'tender-spring' ), admin_url( 'post-new.php' ) ); ?></p>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
 
@@ -54,4 +54,4 @@ get_header(); ?>
 		</div><!-- #primary .site-content -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer(); 

@@ -12,7 +12,6 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title><?php wp_title( '&raquo;', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
@@ -35,8 +34,8 @@
 	</header><!-- #masthead .site-header -->
 	<div id="nav-menu-wrapper">
 		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'tenderSpring' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tenderSpring' ); ?>"><?php _e( 'Skip to content', 'tenderSpring' ); ?></a></div>
+			<h1 class="assistive-text"><?php _e( 'Menu', 'tender-spring' ); ?></h1>
+			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tender-spring' ); ?>"><?php _e( 'Skip to content', 'tender-spring' ); ?></a></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<div id="more"></div>
 		</nav>

@@ -1,14 +1,27 @@
+== Tender Spring ==
+
 Thank you for choosing Tender Spring Theme.
 
-Version History:
+Tender Spring is a responsive, WordPress 3.5+ ready theme that gives you a great feel of spring.  It supports Jetpack infinite scroll.
 
-version 1.0.0 – Hello, world!
-version 1.0.11 - Modified CSS to make it easier to customize the theme with a fixed width
+== Changelog ==
+= 2.0.0  =
+* Fix textdomain
+* Fix some styling errors
+* WordPress 5.x compatibility
+* Change some http to https
+
+= 1.0.11 =
+* Modified CSS to make it easier to customize the theme with a fixed width
+
+= 1.0.0 =
+* Initial version - Hello, world!
+
 
 --------------------------------------------------------------------------------
 For support 
 --------------------------------------------------------------------------------
-visit http://pure-essence.net/2013/03/07/wordpress-theme-tender-spring/
+visit https://pure-essence.net/2013/03/07/wordpress-theme-tender-spring/
 
 
 --------------------------------------------------------------------------------
