@@ -19,14 +19,14 @@ get_header();
 					<div class="entry-wrapper-inner">
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<?php edit_post_link( __( 'Edit', 'tenderSpring' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'tender-spring' ), '<span class="edit-link">', '</span>' ); ?>
 						<div class="entry-meta">
 							<?php tenderSpring_posted_on(); ?>
 						</div><!-- .entry-meta -->
 
 						<nav id="image-navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous' , 'tenderSpring' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;' , 'tenderSpring' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous' , 'tender-spring' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;' , 'tender-spring' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 
@@ -73,19 +73,19 @@ get_header();
 						</div><!-- .entry-attachment -->
 
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tenderSpring' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tender-spring' ), 'after' => '</div>' ) ); ?>
 
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">
 						<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'tenderSpring' ), get_trackback_url() ); ?>
+							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'tender-spring' ), get_trackback_url() ); ?>
 						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'tenderSpring' ), get_trackback_url() ); ?>
+							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'tender-spring' ), get_trackback_url() ); ?>
 						<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'tenderSpring' ); ?>
+							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'tender-spring' ); ?>
 						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
-							<?php _e( 'Both comments and trackbacks are currently closed.', 'tenderSpring' ); ?>
+							<?php _e( 'Both comments and trackbacks are currently closed.', 'tender-spring' ); ?>
 						<?php endif; ?>
 					</footer><!-- .entry-meta -->
 					</div><!-- .entry-wrapper-inner -->

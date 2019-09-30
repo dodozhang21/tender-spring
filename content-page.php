@@ -16,7 +16,7 @@
 		<small class="postmetadata">
 			<?php
 			if($post->post_parent) {
-				printf( __( '&laquo; <a href="%1$s" title="Parent page: %2$s">%3$s</a> | ', 'tenderSpring' ),
+				printf( __( '&laquo; <a href="%1$s" title="Parent page: %2$s">%3$s</a> | ', 'tender-spring' ),
 					esc_url( get_permalink($post->post_parent) ),
 					esc_attr( get_the_title($post->post_parent) ),
 					get_the_title($post->post_parent),
@@ -24,13 +24,13 @@
 				);
 			}
 			?>
-			<?php printf( __( 'Posted on %1$s', 'tenderSpring' ),
+			<?php printf( __( 'Posted on %1$s', 'tender-spring' ),
 					esc_attr( get_the_date( ) )
 				);
 			?>
 		</small>
 
-		<?php edit_post_link( __( 'Edit', 'tenderSpring' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'tender-spring' ), '<span class="edit-link">', '</span>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -39,13 +39,13 @@
 		<?php
 		  $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0&depth=1');
 		  if ($children) { ?>
-		  <h3 class="subpages"><?php printf( __( 'Subpages', 'tenderSpring' ) ); ?></h3>
+		  <h3 class="subpages"><?php printf( __( 'Subpages', 'tender-spring' ) ); ?></h3>
 		  <ul class="subpages">
 			<?php echo $children; ?>
 		  </ul>
 		<?php } ?>
 
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tenderSpring' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tender-spring' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	</div><!-- .entry-wrapper-inner -->
 	</div><!-- .entry-wrapper -->

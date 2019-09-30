@@ -14,7 +14,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tenderSpring' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tender-spring' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header>
 
 				<?php //tenderSpring_content_nav( 'nav-above' ); ?>
@@ -34,11 +34,11 @@ get_header(); ?>
 					<div class="entry-wrapper">
 					<div class="entry-wrapper-inner">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'tenderSpring' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'tender-spring' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'tenderSpring' ); ?></p>
+						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'tender-spring' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 					</div><!-- .entry-wrapper-inner -->

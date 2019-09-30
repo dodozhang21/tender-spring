@@ -1,17 +1,25 @@
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tenderSpring\n"
-"POT-Creation-Date: 2013-06-03 11:45-0600\n"
-"PO-Revision-Date: 2013-06-03 11:45-0600\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Tender Spring\n"
+"POT-Creation-Date: 2019-09-26 15:45+0300\n"
+"PO-Revision-Date: 2019-09-26 15:45+0300\n"
+"Last-Translator: Lena Stergatou <aqua6617@yahoo.com>\n"
+"Language-Team: Lena Stergatou <aqua6617@yahoo.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: 404.php:18
 msgid "Oops! 404 Not Found"
@@ -55,13 +63,11 @@ msgstr ""
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:49
-#: sidebar.php:17
+#: archive.php:49 sidebar.php:17
 msgid "Archives"
 msgstr ""
 
-#: archive.php:93
-#: search.php:37
+#: archive.php:93 search.php:37
 msgid "Nothing Found"
 msgstr ""
 
@@ -76,18 +82,22 @@ msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
 
-#: comments.php:39
-#: comments.php:59
+#: comments.php:32
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:39 comments.php:59
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:40
-#: comments.php:60
+#: comments.php:40 comments.php:60
 msgid "&laquo; Older Comments"
 msgstr ""
 
-#: comments.php:41
-#: comments.php:61
+#: comments.php:41 comments.php:61
 msgid "Newer Comments &raquo;"
 msgstr ""
 
@@ -105,10 +115,7 @@ msgstr ""
 msgid "Posted on %1$s"
 msgstr ""
 
-#: content-page.php:33
-#: content-single.php:13
-#: content.php:22
-#: content.php:24
+#: content-page.php:33 content-single.php:13 content.php:22 content.php:24
 #: image.php:22
 msgid "Edit"
 msgstr ""
@@ -117,16 +124,12 @@ msgstr ""
 msgid "Subpages"
 msgstr ""
 
-#: content-page.php:48
-#: content-single.php:24
-#: content.php:40
-#: image.php:76
+#: content-page.php:48 content-single.php:24 content.php:40 image.php:76
 msgid "Pages:"
 msgstr ""
 
-#: content-single.php:30
-#: content.php:48
-#: content.php:58
+#. translators: used between list items, there is a space after the comma
+#: content-single.php:30 content.php:48 content.php:58
 msgid ", "
 msgstr ""
 
@@ -147,6 +150,11 @@ msgstr ""
 
 #: content.php:14
 msgid "Featured Post"
+msgstr ""
+
+#: content.php:19
+#, php-format
+msgid "Permalink to %s"
 msgstr ""
 
 #: content.php:39
@@ -175,48 +183,48 @@ msgstr ""
 msgid "% Thoughts"
 msgstr ""
 
-#: footer.php:28
+#: footer.php:22
 #, php-format
 msgid "Proudly powered by %1$s"
 msgstr ""
 
-#: footer.php:29
+#: footer.php:23
 #, php-format
 msgid "Theme %1$s by %2$s."
 msgstr ""
 
-#: footer.php:31
+#: footer.php:25
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: functions.php:75
+#: functions.php:85
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:99
 #, php-format
 msgid "%3$s | Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:89
+#: functions.php:99
 msgid "A Semantic Personal Publishing Platform"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:111
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:128
 #, php-format
 msgid " <a href=\"%1$s\">Continue reading &#8594;</a>"
 msgstr ""
 
-#: header.php:40
+#: header.php:37
 msgid "Menu"
 msgstr ""
 
-#: header.php:41
+#: header.php:38
 msgid "Skip to content"
 msgstr ""
 
@@ -254,37 +262,18 @@ msgstr ""
 msgid "Both comments and trackbacks are currently closed."
 msgstr ""
 
-#: index.php:43
-msgid "No posts to display"
-msgstr ""
-
-#: index.php:47
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: search.php:17
-#, php-format
-msgid "Search Results for: %s"
-msgstr ""
-
-#: search.php:41
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: searchform.php:10
-msgid "Search"
-msgstr ""
-
-#: sidebar.php:24
-msgid "Meta"
-msgstr ""
-
 #: inc/template-tags.php:26
 msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:30
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgctxt "Next post link"
+msgid "&raquo;"
 msgstr ""
 
 #: inc/template-tags.php:36
@@ -299,8 +288,7 @@ msgstr ""
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:65
-#: inc/template-tags.php:88
+#: inc/template-tags.php:65 inc/template-tags.php:88
 msgid "(Edit)"
 msgstr ""
 
@@ -313,6 +301,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
+#. translators: 1: date, 2: time
 #: inc/template-tags.php:86
 #, php-format
 msgid "%1$s at %2$s"
@@ -364,7 +353,66 @@ msgstr ""
 msgid "Hide Donate Button"
 msgstr ""
 
-#: inc/theme-options/theme-options.php:195
+#: inc/theme-options/theme-options.php:194
 #, php-format
 msgid "%s Theme Options"
+msgstr ""
+
+#: index.php:43
+msgid "No posts to display"
+msgstr ""
+
+#: index.php:47
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:41
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: searchform.php:10 searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search &hellip;"
+msgstr ""
+
+#: sidebar.php:24
+msgid "Meta"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Tender Spring"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://pure-essence.net/2013/03/07/wordpress-theme-tender-spring"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Tender Spring is a responsive, WordPress 3.5 ready theme that gives you a "
+"great feel of spring.  It supports Jetpack infinite scroll."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Ying Zhang"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://regretless.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "No Sidebar"
 msgstr ""

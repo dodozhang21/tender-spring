@@ -1,13 +1,15 @@
 /*
 Theme Name: Tender Spring
-Theme URI: http://pure-essence.net/2013/03/07/wordpress-theme-tender-spring
+Theme URI: https://pure-essence.net/2013/03/07/wordpress-theme-tender-spring
 Author: Ying Zhang
-Author URI: http://regretless.com/
+Author URI: https://regretless.com/
 Description: Tender Spring is a responsive, WordPress 3.5 ready theme that gives you a great feel of spring.  It supports Jetpack infinite scroll.
-Version: 1.0.11
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: flexible-width, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, green, light, custom-menu, editor-style, full-width-template, translation-ready
+Tags: two-columns, threaded-comments, sticky-post, microformats, right-sidebar, custom-menu, editor-style, full-width-template, translation-ready
+Text Domain: tender-spring
+Domain Path: /languages/
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1382,4 +1384,37 @@ table#wp-calendar td#next {
 }
 
 @media screen and (max-width:480px) {
+}
+
+/* Text meant only for screen readers.
+Copied from https://codex.wordpress.org/CSS#WordPress_Generated_Classes*/
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
 }

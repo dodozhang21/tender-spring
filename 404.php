@@ -15,11 +15,11 @@ get_header(); ?>
 				<div class="entry-wrapper">
 				<div class="entry-wrapper-inner">
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Oops! 404 Not Found', 'tenderSpring' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Oops! 404 Not Found', 'tender-spring' ); ?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php _e( 'Well, this is awkward. Try a search?', 'tenderSpring' ); ?></p>
+					<p><?php _e( 'Well, this is awkward. Try a search?', 'tender-spring' ); ?></p>
 
 					<p><?php get_search_form(); ?></p>
 					
@@ -27,7 +27,7 @@ get_header(); ?>
 						<?php the_widget( 'WP_Widget_Recent_Posts', '', 'before_title=<h2 class="widget-title">&after_title=</h2>' ); ?>
 	
 						<div class="widget">
-							<h2 class="widget-title"><?php _e( 'Categories', 'tenderSpring' ); ?></h2>
+							<h2 class="widget-title"><?php _e( 'Categories', 'tender-spring' ); ?></h2>
 							<ul>
 							<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 15 ) ); ?>
 							</ul>
