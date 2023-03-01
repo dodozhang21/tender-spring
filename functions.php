@@ -158,15 +158,15 @@ add_action( 'wp_enqueue_scripts', 'tenderSpring_scripts' );
  * Custom CSS support
  */
 function tenderSpring_custom_css() {
-    $options = get_option('tenderSpring_theme_options');
-
-    $tenderSpring_customcss = $options['custom_css'];
-
-    if ( $tenderSpring_customcss ) {
-        echo "<style type='text/css'>";
-        echo $tenderSpring_customcss;
-        echo "</style>";
-    }
+   $options = get_option( 'tenderSpring_theme_options' );
+	if ( (is_array( $options ) ) && ( array_key_exists( 'custom_css', $options ) ) ) {
+		$tenderSpring_customcss = $options['custom_css'];
+		if ( $tenderSpring_customcss ) {
+			echo "<style type='text/css'>";
+			echo $tenderSpring_customcss;
+			echo '</style>';
+		}
+	}
 }
 add_action('wp_head', 'tenderSpring_custom_css');
 
